@@ -1,0 +1,81 @@
+
+\chapter{Introduction\label{ch:intro}}
+
+Despite its humble beginnings, the web has evolved into a full-fledged
+software delivery platform where users increasingly rely on web applications
+to replace software that traditionally used to be downloaded and installed on
+their devices. Modern HTML5 standards and the constant evolution of JavaScript
+enable the development and delivery of office suites, photo-editing software,
+collaboration tools, and a wide range of other complex applications, all
+using HTML, CSS, and JavaScript and all delivered and rendered through the
+user's browser.
+
+
+This increase in capabilities requires more and more complex server-side
+and client-side code to be able to deliver the features that users have
+come to expect. However, as the code and code complexity of an application
+expands, so does its attack surface. Web applications are vulnerable to
+a wide range of client-side and server-side attacks including Cross-Site
+Scripting~\cite{xss,kirda2006noxes,vogt2007cross}, Cross-Site
+Request Forgery~\cite{csrf,jovanovic2006preventing,barth2008csrf},
+Remote Code Execution~\cite{rce}, SQL
+injection~\cite{sqlInjection,halfond2006classification}, and timing
+attacks~\cite{brumley2003timing,vangoethem2015timing}. All of these
+attacks have
+been abused numerous times to compromise web servers, steal user data,
+move laterally behind a company's firewall, and infect users with malware
+and cryptojacking scripts~\cite{minesweeper-ccs2018, wang2018seismic,
+cryptojacking-ccs2018}.
+
+One possible strategy of dealing with ever-increasing software complexity is to
+customize software according to the environment where it is used. This idea,
+known as \textit{attack-surface reduction} and \textit{software debloating},
+is based on the assumption that not all users require the same features from
+the same piece of software. By removing the features of different deployments
+of the same software according to what the users of each deployment require,
+one can reduce the attack surface of the program by maintaining only the
+features that users utilize and deem necessary. The principle of software
+debloating has been successfully tried on operating systems (both to build
+unikernel OSs~\cite{madhavapeddy2013unikernels} and to remove
+unnecessary code from the Linux kernel~\cite{kurmus2013attack,
+Kurmus:2011:ASR:1972551.1972557}) and more recently on shared
+libraries~\cite{mishra2018shredder,quach2018debloating} and compiled binary
+applications~\cite{heo2018effective}.
+
+In this report, we present the first evaluation of the applicability of software
+debloating for web applications. We focus on four popular open-source PHP
+applications (phpMyAdmin, MediaWiki, Magento, and WordPress) and we map the CVEs of 69
+reported vulnerabilities to the source code of each web application. We utilize
+a combination of tutorials (encoded as Selenium scripts), monkey testing,
+web crawling, and vulnerability scanning to get an \emph{objective} and \emph{
+unbiased} usage profile for each application. By using
+these methods to stimulate the evaluated web applications in combination with
+dynamically profiling the execution of server-side code, we can precisely
+identify the code that was executed during this stimulation and therefore
+the code that should be retained during the process of debloating.
+
+Equipped with these server-side execution traces, we evaluate two different
+debloating strategies (file-level debloating and function-level debloating)
+which we use to remove unnecessary code from the web applications and quantify
+the security benefits of this procedure. Among others, we discover an average
+reduction of the codebase of the evaluated web application of 33.1\% for
+file-level debloating and 46.8\% for function-level debloating, with comparable
+levels of reduction in the applications' cyclomatic complexity.
+In terms of
+known vulnerabilities, we remove up to 60\% of known CVEs and the vast majority
+of PHP gadgets that could be used in Property Oriented Programming attacks
+(the equivalent of Return-Oriented Programming attacks for PHP applications).
+
+\noindent Overall, our contributions are the following:
+
+\begin{itemize}
+  \setlength\itemsep{0.5em}
+\item We encode a large number of application tutorials as Selenium scripts which, in combination with monkey testing, crawling, and vulnerability scanning, can be used to objectively exercise a web application. Similarly, we map 69 CVEs to their precise location in the applications' source code to be able to quantify whether the vulnerable code could be removed during the process of debloating.
+
+\item We design and develop an end-to-end analysis pipeline using Docker containers which can execute client-side, application stimulation, while dynamically profiling the executing server-side code.
+
+\item We use this pipeline to precisely quantify the security benefits of debloating web applications, finding that debloating pays large dividends in terms of security, by reducing a web application's source code, cyclomatic complexity, and vulnerability to known attacks.
+
+\end{itemize}
+
+\noindent To motivate further research into debloating web applications and to ensure the reproducibility of our findings, we are releasing \emph{all} data and software artifacts.

@@ -1,0 +1,79 @@
+
+\chapter{Related Work\label{ch:pastwork}}
+
+Over the years, different approaches that target very different parts of the
+software stack have been studied in the context of software debloating.
+
+\subsection{Debloating for the web}
+
+Despite the importance of the web platform, there has been very little work that attempts to apply debloating to it. Snyder et al. investigated the costs and
+benefits of giving websites access to all available browser features through
+JavaScript~\cite{snyder2017vibrate}. The authors evaluated the use of different
+JavaScript APIs in the wild and proposed the use of a client-side extension
+which controls which APIs any given website would get access to, depending
+on that website's level of trust. Schwarz et al. similarly utilize a browser
+extension to limit the attack surface of Chrome and show that they are able
+to protect users against microarchitectural and side-channel
+attacks~\cite{Schwarz2018}. These studies are orthogonal to our work since
+they both focus on the client-side of the web platform, whereas we focus on
+the server-side web applications.
+
+
+%boomsma2012Dead
+Boomsma et al. performed dynamic profiling of a custom web application
+(a PHP application from an industry partner)~\cite{boomsma2012Dead}. The
+authors measured the time it takes for their dynamic profile system to get
+complete coverage and the percentage of files that they could remove. Since the
+application was a custom one, the authors were not able to report specifics
+in terms of the reduction of the programs attack surface, as that relates
+to CVEs. Contrastingly, by focusing on popular web applications, and utilizing function-level as well as file-level debloating, we were
+able to precisely quantify the reduction of vulnerabilities, both in terms
+of known CVEs as well as gadgets for PHP object-injection attacks.
+
+
+\subsection{Debloating in other platforms}
+
+%C-Reduce
+%Specific to C/C++
+%Target source code
+Regehr et al. developed \textit{C-Reduce} which is a tool that works at the source code level~\cite{regehr2012CReduce}.
+It performs reduction of C/C++ files by applying very specific program transformation rules.
+%Perses
+Sun et al. designed a framework called \textit{Perses} that utilizes the grammar of any programming language to guide reduction~\cite{sun2018perses}.
+Its advantage is that it does not generate syntactically invalid variants during reduction so that the whole process is made faster.
+%Chisel
+
+Heo et al. worked on \textit{Chisel} whose distinguishing feature is that it performs fine-grained debloating by removing code even on the functions that are executed, using reinforcement learning to identify the best reduced program~\cite{heo2018effective}.
+%Summary
+
+All three aforementioned approaches are founded on Delta debugging~\cite{zeller2002Delta}.
+They reduce the size of an application progressively and verify at each step if the created variant still satisfies the desired properties.
+
+%While these delta debugging reduction techniques could be applied to debloat web applications, it does not scale well for large programs with the usage profiles we record.
+%In order to validate a variant, we would need to repeat at each step of the reduction the complete list of the user's interaction with the program to make sure we get the right output and it would be very costly.
+%One way to lower the time of each step would be to have a minimal set of features used by a recorded profile so that only those are tested.
+%However, most web applications do not provide a set of features to use or a list of APIs to call.
+%For this reason, dynamic analysis provides us with a generic way to debloat any web application that is much more efficient and practical for web applications than traditional delta debugging.
+
+%Trimmer
+Sharif et al. proposed \textit{Trimmer}, a system that goes further than simple static analysis~\cite{sharif2018Trimmer}.
+It propagates the constants that are defined in program arguments and configuration files so that it can remove code that is not used in that particular execution context.
+However, their system is not particularly well suited for web applications where we remove complete features.
+Our framework goes beyond this contextual analysis by mapping what is actually executed by the application.
+
+Other works include research that revolves mainly around static analysis to remove dead code.
+%Java programs
+Jiang et al. looked at reducing the bloat of Java applications with a tool called \textit{JRed}~\cite{jiang2016Jred}.
+%Android apps
+Jiang et al. also designed \textit{RedDroid} to reduce the size of Android applications with program transformations~\cite{jiang2018reddroid}.
+%By trimming compile-time and install-time redundancies, the authors reduce the size of Android apps by an average of 15\%.
+%Debloating Software through Piece-Wise Compilation and Loading
+Quach et al. adopted a different approach by bringing dead-code elimination benefits of static linking to dynamic linking~\cite{quach2018debloating}.
+%Shared libraries are pre-built and are not analyzed by the loader at runtime.
+%It is then not possible to remove dead code beforehand from these libraries.
+%In order to overcome this limitation, the authors generate a metadata file at compile time that then instructs the loader about what should be loaded from these shared libraries.
+%These three studies only remove unused code either in the program or in shared libraries. With our system, we remove more than dead code by keeping only the features that are actually used, as quantified by varied usage profiles.
+
+%Cimplifier Container debloating
+%rastogi2017Cimplifier
+Rastogi et al. looked at debloating a container by partitioning it into smaller and more secure ones~\cite{rastogi2017Cimplifier}. They perform dynamic analysis on system-call logs to determine which components and executables are used in a container, in order to keep them. Koo et al. proposed configuration-driven debloating~\cite{Koo:2019:CSD:3301417.3312501}. Their system removes unused libraries loaded by applications under a specific configuration. They test their system on Nginx, VSFTPD, and OpenSSH and show a reduction of 78\% of code from Nginx libraries is possible based on specific configurations.

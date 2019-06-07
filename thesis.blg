@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: ch-1/introduction.aux
+A level-1 auxiliary file: ch-2/literature.aux
+A level-1 auxiliary file: ch-3/experiments.aux
+A level-1 auxiliary file: ch-4/results.aux
+A level-1 auxiliary file: ch-appendicies/implementation.aux
+The style file: plain.bst
+Database file #1: thesis.bib
+Warning--I didn't find a database entry for "muddthesis2009"
+Warning--I didn't find a database entry for "mudd2009"
+Warning--I didn't find a database entry for "fear2005booktabs"
+Warning--to sort, need author or key in xss
+Warning--to sort, need author or key in csrf
+Warning--to sort, need author or key in rce
+Warning--to sort, need author or key in sqlInjection
+Warning--empty year in jiang2016Jred
+Warning--there's a number but no volume in Schwarz2018
+You've used 31 entries,
+            2118 wiz_defined-function locations,
+            667 strings with 10786 characters,
+and the built_in function-call counts, 9946 in all, are:
+= -- 887
+> -- 645
+< -- 2
++ -- 255
+- -- 224
+* -- 682
+:= -- 1706
+add.period$ -- 102
+call.type$ -- 31
+change.case$ -- 204
+chr.to.int$ -- 0
+cite$ -- 37
+duplicate$ -- 390
+empty$ -- 790
+format.name$ -- 224
+if$ -- 2077
+int.to.chr$ -- 0
+int.to.str$ -- 31
+missing$ -- 27
+newline$ -- 154
+num.names$ -- 54
+pop$ -- 278
+preamble$ -- 1
+purify$ -- 173
+quote$ -- 0
+skip$ -- 213
+stack$ -- 0
+substring$ -- 155
+swap$ -- 47
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 124
+warning$ -- 6
+while$ -- 54
+width$ -- 33
+write$ -- 338
+(There were 9 warnings)
