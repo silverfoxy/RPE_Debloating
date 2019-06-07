@@ -18,6 +18,33 @@
 {SQL Injection: OWASP}.
 \newblock \url{https://www.owasp.org/index.php/SQL_Injection}.
 
+\bibitem{drupalVulenrability}
+{Drupal Core - 3rd-party libraries -SA-CORE-2018-005 | Drupal.org}.
+\newblock \url{https://www.drupal.org/SA-CORE-2018-005}, 2018.
+
+\bibitem{symfonyPatch}
+{[HttpFoundation] Remove support for legacy and risky HTTP headers - Symfony
+  framework on GitHub}.
+\newblock
+  \url{https://github.com/symfony/symfony/commit/e447e8b92148ddb3d1956b96638600ec95e08f6b#diff-9d63a61ac1b3720a090df6b1015822f2R1694},
+  2018.
+
+\bibitem{symfonyVulnerability}
+{NVD - CVE-2018-14773 (Symfony vulnerability)}.
+\newblock \url{https://nvd.nist.gov/vuln/detail/CVE-2018-14773}, 2018.
+
+\bibitem{packagistDownloads}
+{Packagist statistics}.
+\newblock \url{https://packagist.org/statistics}, 2018.
+
+\bibitem{pypiDownloads}
+{PyPI Stats}.
+\newblock \url{https://pypistats.org/packages/__all__}, 2018.
+
+\bibitem{zendVulnerability}
+{Security Advisory: URL Rewrite vulnerability (Zend Framework)}.
+\newblock \url{https://framework.zend.com/security/advisory/ZF2018-01}, 2018.
+
 \bibitem{barth2008csrf}
 Adam Barth, Collin Jackson, and John~C. Mitchell.
 \newblock {Robust Defenses for Cross-site Request Forgery}.
@@ -154,6 +181,13 @@ Michael Schwarz, Moritz Lipp, and Daniel Gruss.
 \newblock {JavaScript Zero: Real JavaScript and Zero Side-Channel Attacks}.
 \newblock {\em Ndss}, (February), 2018.
 
+\bibitem{shacham2007geometry}
+Hovav Shacham.
+\newblock {The geometry of innocent flesh on the bone: Return-into-libc without
+  function calls (on the x86)}.
+\newblock In {\em Proceedings of the 14th ACM Conference on Computer and
+  Communications Security}. ACM, 2007.
+
 \bibitem{sharif2018Trimmer}
 Hashim Sharif, Muhammad Abubakar, Ashish Gehani, and Fareed Zaffar.
 \newblock {TRIMMER: Application Specialization for Code Debloating}.
@@ -179,6 +213,13 @@ Philipp Vogt, Florian Nentwich, Nenad Jovanovic, Engin Kirda, Christopher
 \newblock {Cross Site Scripting Prevention with Dynamic Data Tainting and
   Static Analysis}.
 \newblock In {\em NDSS}, volume 2007, 2007.
+
+\bibitem{nodeDownloads}
+Laurie Voss.
+\newblock {The State of JavaScript Frameworks}.
+\newblock
+  \url{https://www.npmjs.com/npm/the-state-of-javascript-frameworks-2017-part-2-the-react-ecosystem},
+  2018.
 
 \bibitem{wang2018seismic}
 Wenhao Wang, Benjamin Ferrell, Xiaoyang Xu, Kevin~W Hamlen, and Shuang Hao.

@@ -3,10 +3,12 @@
 \contentsline {section}{List of Figures}{vii}{section*.5}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Related Work}{4}{chapter.2}
-\contentsline {subsection}{\numberline {2.0.1}Debloating for the web}{4}{subsection.2.0.1}
-\contentsline {subsection}{\numberline {2.0.2}Debloating in other platforms}{5}{subsection.2.0.2}
-\contentsline {chapter}{\numberline {3}Design \& Methodology}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Options}{8}{section.3.1}
+\contentsline {subsection}{\numberline {2.0.1}Debloating for the web}{5}{subsection.2.0.1}
+\contentsline {subsection}{\numberline {2.0.2}Debloating in other platforms}{6}{subsection.2.0.2}
+\contentsline {chapter}{\numberline {3}Design \& Methodology}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}Background}{8}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Package managers and software bloat}{8}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Motivating web-application debloating}{9}{subsection.3.1.2}
 \contentsline {chapter}{\numberline {4}Results \& Conclusion}{11}{chapter.4}
 \contentsline {section}{\numberline {4.1}Future Work}{11}{section.4.1}
 \contentsline {chapter}{\numberline {A}Implementation Details}{12}{appendix.A}

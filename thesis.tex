@@ -12,6 +12,16 @@
 %%% For the electronic copy, use doublespacing, define "\proquestmode" to use outlined links, instead of colored links.
 \documentclass[12pt,lot, lof]{puthesis}
 \newcommand{\proquestmode}{}
+
+%% \todo{} command.
+%
+% Outputs red TODOs in the document. Requires \usepackage{color}.
+%
+% Usage: \todo{Document the TODO command.}
+%
+% Comment out second line to disable.
+\usepackage{xcolor}
+\newcommand{\todo}[1]{{\color{red} TODO: {#1}}}
 % I prefer proquestmode to be off for electronic copies for normal use, since the colored links are less distracting. However when printed in black and white, the colored links are difficult to read.
 
 %%% For early drafts without some of the frontmatter
@@ -166,8 +176,6 @@
 
   }
   {\end{list}}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
 %%%% Front-matter

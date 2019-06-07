@@ -2,7 +2,17 @@
 \chapter{Related Work\label{ch:pastwork}}
 
 Over the years, different approaches that target very different parts of the
-software stack have been studied in the context of software debloating.
+software stack have been studied in the context of software debloating. The key characteristics that distinguish debloating approaches are as follows:
+
+\begin{enumerate}
+  \item{\textbf{What is being removed and the definition of bloat:} On one hand removing dead code from included libraries and external dependencies has been studied. While this approach does not
+  target the actual vulnerable parts of the code (e.g., the source of a buffer overflow), it will raise the bar for attackers to exploit such systems by removing gadgets used in Return Oriented Programming (ROP)~\cite{shacham2007geometry}.
+  On the other hand, similar to our work, we observe approaches that target the actual features that are unused under certain circumstances. By defining the bloat as unused code in the applications, as we show later in the results section for web applications, one can mitigate the vulnerable pieces of code and reduce the attack surface of applications.}
+  \item{\textbf{Identification of bloat:} The other difference arises from the underlying mechanism used to identify the bloat. Depending on target application and the platform, static analysis might need to be augmented by dynamic analysis to detect
+  unused code. In addition to that, the literature has incorporated application configuration files, high level manual specifications and usage profiles with dynamic application instrumentation to detect unused code. Contrastingly, Delta Debugging is used. this approach is different in that it starts by removing lines of source code and then verifies if the reduction is valid~\cite{zeller2002Delta}. \todo{Add the references}}
+  \item{\textbf{Evaluation \& metrics:} Based on the context where debloating is introduced (e.g., To ease the debugging process, reduce the software footprint or reduce the attack surface) different metrics has been used to measure the success of debloating strategies. In the context of security, reduction in size of the target application (i.e., Lines of code), reduction in the number of gadgets available for attackers and removed historical vulnerabilities are measured and reported. \todo{complete the list}}
+\end{enumerate}
+
 
 \subsection{Debloating for the web}
 
