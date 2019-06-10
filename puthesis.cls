@@ -48,7 +48,8 @@
 %%   to be declared from within the document itself.
 \newcommand*{\makefrontmatter}{
 \bodyspacing
-\frontmatter\maketitlepage\makecopyrightpage\makeabstract
+%\frontmatter\maketitlepage\makecopyrightpage\makeabstract
+\frontmatter\maketitlepage\makeabstract
 \makeacknowledgements\makededication\maketoc
 \makelot\clearpage\makelof\clearpage\makelos
 \clearpage\mainmatter

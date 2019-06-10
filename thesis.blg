@@ -5,10 +5,9 @@ A level-1 auxiliary file: ch-1/introduction.aux
 A level-1 auxiliary file: ch-2/literature.aux
 A level-1 auxiliary file: ch-3/experiments.aux
 A level-1 auxiliary file: ch-4/results.aux
-A level-1 auxiliary file: ch-appendicies/implementation.aux
+A level-1 auxiliary file: ch-appendicies/appendices.aux
 The style file: plain.bst
 Database file #1: thesis.bib
-Warning--I didn't find a database entry for "fear2005booktabs"
 Warning--to sort, need author or key in xss
 Warning--to sort, need author or key in csrf
 Warning--to sort, need author or key in rce
@@ -19,47 +18,70 @@ Warning--to sort, need author or key in symfonyVulnerability
 Warning--to sort, need author or key in drupalVulenrability
 Warning--to sort, need author or key in symfonyPatch
 Warning--to sort, need author or key in zendVulnerability
+Warning--to sort, need author or key in gremlinsjs
+Warning--to sort, need author or key in greasemonkey
+Warning--to sort, need author or key in burpsuite
+Warning--to sort, need author or key in XDebug
+Warning--to sort, need author or key in phpdbg
+Warning--to sort, need author or key in xhprof
+Warning--to sort, need author or key in autoappend
+Warning--to sort, need author or key in phpshutdown
+Warning--to sort, need author or key in POI
+Warning--to sort, need author or key in PHPAutoload
+Warning--to sort, need author or key in PHPWakeup
+Warning--to sort, need author or key in PHPGGC
+Warning--to sort, need author or key in phpunitVulnerability
+Warning--to sort, need author or key in guzzle
+Warning--to sort, need author or key in Symfony
+Warning--to sort, need author or key in PHP_CodeSniffer
+Warning--to sort, need author or key in less.php
+Warning--to sort, need author or key in elastica
+Warning--to sort, need author or key in twentyfourteen_theme
+Warning--to sort, need author or key in twentytwelve_theme
+Warning--to sort, need author or key in zendframework1
+Warning--to sort, need author or key in wordpressPlugin
 Warning--empty year in jiang2016Jred
+Warning--there's a number but no volume in mccabe1976complexity
 Warning--there's a number but no volume in Schwarz2018
-You've used 39 entries,
+You've used 76 entries,
             2118 wiz_defined-function locations,
-            698 strings with 12019 characters,
-and the built_in function-call counts, 11382 in all, are:
-= -- 1028
-> -- 665
+            838 strings with 16239 characters,
+and the built_in function-call counts, 18089 in all, are:
+= -- 1666
+> -- 795
 < -- 2
-+ -- 267
-- -- 228
-* -- 734
-:= -- 1891
-add.period$ -- 121
-call.type$ -- 39
-change.case$ -- 230
++ -- 336
+- -- 260
+* -- 988
+:= -- 2766
+add.period$ -- 207
+call.type$ -- 76
+change.case$ -- 362
 chr.to.int$ -- 0
-cite$ -- 51
-duplicate$ -- 453
-empty$ -- 978
-format.name$ -- 228
-if$ -- 2426
+cite$ -- 111
+duplicate$ -- 747
+empty$ -- 1822
+format.name$ -- 260
+if$ -- 4026
 int.to.chr$ -- 0
-int.to.str$ -- 39
-missing$ -- 28
-newline$ -- 188
-num.names$ -- 58
-pop$ -- 342
+int.to.str$ -- 76
+missing$ -- 36
+newline$ -- 345
+num.names$ -- 76
+pop$ -- 618
 preamble$ -- 1
-purify$ -- 191
+purify$ -- 287
 quote$ -- 0
-skip$ -- 267
+skip$ -- 557
 stack$ -- 0
-substring$ -- 195
-swap$ -- 56
+substring$ -- 380
+swap$ -- 94
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 156
-warning$ -- 12
-while$ -- 58
-width$ -- 41
-write$ -- 407
-(There were 13 warnings)
+type$ -- 302
+warning$ -- 35
+while$ -- 76
+width$ -- 78
+write$ -- 702
+(There were 35 warnings)

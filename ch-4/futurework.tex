@@ -1,5 +1,105 @@
-\section{Future Work}
+\section{Limitations and future work}
+\label{sec:limitations}
+In this study, we set out to precisely quantify the security benefits of
+debloating, when applied to web applications. Through a series of experiments,
+we demonstrated that debloating web applications has a number of very
+concrete advantages. We showed that debloating can, on average, decrease an
+application's code base by removing hundreds of thousands of lines of code,
+reduce its cyclomatic complexity by 30-50\% and remove code associated with
+up to half of historical CVEs. Moreover, even for vulnerabilities that could
+not be removed, debloating can remove gadgets that makes their exploitation
+significantly harder. Next, we discuss some of the inherent and technical limitations of our approach and future direction.
 
-Future work should include options in the template for a masters thesis or an undergraduate senior thesis. It should also support running headings in the headers using the `headings' pagestyle.  The print mode and proquest mode included in the template might also be candidates to include in the class itself. 
+\vspace{1ex}
 
- 
+\noindent\textbf{Lack of available exploits:} The number of exploits publicly available compared to the total number of registered CVEs is low. At the same time, the effort to study vulnerability reports, find the relevant patch or bug report, and track the actual vulnerability down to source code level takes a non-negligible amount of manual labor.
+% Moreover, these public exploits usually favor certain types of vulnerabilities over others (e.g. favoring remote-command execution over XSS).
+This lack of available exploits limits our ability to test the exploitability of vulnerabilities before debloating since certain vulnerabilities might only be exploitable under specific configurations.
+For example the set of five file-upload-related vulnerabilities in our MediaWiki dataset (marked as gray in Table~\ref{table:listofallcves}) require access to file upload functionality which is disabled by default. A maintained set of automated, replayable exploits against popular web applications similar to ``BugBox'' introduced by Nilson et al. in 2013, could substantially help researchers at this step\cite{bugbox}.
+
+To address this issue, we mapped the CVEs to features within those applications. This is done by studying the architecture of
+target applications based on documentation within the code and available on their websites. We marked a CVE as unexploitable if the underlying feature is disabled by default, and online tutorials in our dataset do not
+require users to enable that functionality. This limitation only applies to reported numbers on removed CVEs and does not affect our results on POI gadgets since their mere existence is enough for them to be used in gadget chains.
+
+Our approach results in lower bounds for CVE removal since disabling modules through application configuration does not guarantee removal of all code paths that trigger those modules. Taking CVE-2019-6703 as an example, a vulnerability was discovered in the WordPress ``Total Donations'' plugin~\cite{wordpressPlugin} and disabling this plugin did not prevent attackers from invoking the vulnerable end point and running their exploits.
+
+\vspace{1ex}
+\noindent\textbf{Dynamic code coverage:}  Given our reliance on dynamic
+code-coverage techniques, it is clear that the success of debloating a web application
+is tightly related to its usage profile. Even though we constructed profiles
+in a way that is reproducible and unbiased (i.e. by relying on external
+popular tutorials, monkey testing, crawlers, and vulnerability scanners), we cannot claim that
+real web users would not trigger code that was removed during the stage of
+debloating, while they are interacting with a debloated web application.
+
+More specifically, our modeled usage profiles do not cover all possible benign states of target web applications as we assume that users do not use all available features.
+Our intuition behind debloating proves to be successful to a large degree since removing unnecessary features brings clear security improvements.
+At the same time, our current usage model may not cover deep error states (e.g. logical errors in multi-stage form submissions, or the invalid structure of uploaded files).
+As such, we intend to follow-up this work with crowd sourcing and user studies
+to understand how administrators, developers, and regular users utilize the
+evaluated web applications and whether their usage profiles would allow for
+similar levels of debloating.
+
+Due to nature of our approach, we can not take advantage of standard
+static-analysis techniques, since we aim to remove the features that are
+not useful for a given set of users, not those that are not reachable by
+other code. Using static analysis would greatly overestimate the code that
+needs to be maintained through the process of debloating and the resulting
+web application would contain code (and therefore vulnerabilities) that is
+not useful to all users. Going forward, we envision a hybrid approach where
+dynamic analysis is used as a first step to identify the core features that
+are useful for a specific set of users. These features can then be used as
+a starting point for a follow-up static analysis phase to ensure that all
+code related to these features is maintained when debloating a web application.
+
+\vspace{1ex}
+\noindent\textbf{Handling requests to removed code:}
+A separate issue is that of handling requests to removed code. Our
+current prototype utilizes assertions to log these requests so that we can
+investigate why the corresponding server-side code was not captured by our
+coverage profiler. When real users utilize debloated web applications,
+one must decide how these failures (i.e. client-side requests requiring
+server-side code that was removed) will be handled. Assuming that cleanly
+exiting the application and showing an error to the user is not sufficient,
+we need methods to authenticate the user's request, determine whether the
+request is a benign one (and not a malicious request that aims to exploit
+the debloated web application) and potentially re-introduce the removed
+code. The client/server architecture of web applications lends itself well
+to this model since the web server can decide to re-introduce debloated code
+and handle the user's request, without any knowledge of this happening from
+the side of the user. All of this, however, requires server-side systems
+to introduce the code at the right time and for the appropriate users. We
+leave the design of such systems for future work.
+
+\vspace{1ex}
+\noindent\textbf{Metrics to measure debloating effectiveness:}
+In this paper, we use Cyclomatic Complexity (CC), Logical Lines of Code
+(LLOC), reduction in historical CVEs, and POP gadget reduction as four metrics to measure the
+effects of debloating on different web applications. However, not every line of code
+contributes equally to a program's attack surface. For example, 15\% of removed
+files from Magento 2.0.5 are test files for external packages and
+the core of the application. Such code may not be directly exploitable or
+used in a POP chain unless there is a misconfiguration (e.g., autoloading
+including these files, or the directories being publicly accessible). As such,
+the resulted reduction in source code metrics (CC and LLOC) may also reflect the code
+that does not contribute to the attack surface.
+Contrastingly, the reduction of exploitable CVEs draws a more realistic picture
+of real world attacks. The drawback of this metric is its unavailability for
+proprietary software and the manual effort required to map CVEs to source
+code and verify their exploitability.
+
+\vspace{1ex}
+\noindent\textbf{Debloating effectiveness:}
+Through our debloating experiments we discovered that, in terms of debloating,
+not all applications are ``equal.'' Modular web applications debloat
+significantly better than monolithic ones (such as Wordpress). We hope that
+our findings will inspire different debloating strategies that lend themselves
+better to monolithic web applications which resist our current function-level
+and file-level debloating strategies.
+
+
+
+
+%Finally, this study focuses on the feasibility of debloating based on usage profiles. We tried to model the behavior of general users of these applications through tutorials and other mechanisms, but production environments are vastly versatile in terms of usage of application features
+%and the full potential of debloating is ultimately based on the users of instances of applications. As such, efforts to tune the performance of our system and its dependencies to their full potential
+%are left for future.

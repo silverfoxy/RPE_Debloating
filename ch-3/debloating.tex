@@ -1,0 +1,64 @@
+\section{Debloating web applications}
+\label{sec:debloating}
+
+In this section, we briefly describe the evaluated debloating strategies and
+the steps we took to ensure that the debloated applications remain functional.
+
+
+\subsection{Debloating strategies}
+
+By combining the simulated usage of a web application (achieved through
+tutorials encoded in Selenium scripts, web crawlers, monkey testing, and
+vulnerability scanning) with
+server-side code profiling, we can identify the code that was executed
+as part of handling web requests. Consequently, code whose execution was
+not triggered by any client-side request can presumably be removed since
+it is not necessary for any of the functionality that is desired by users
+(as quantified by the utilized usage profiles).
+In this work, we evaluate the following debloating strategies:
+
+\begin{itemize}
+  \item \textbf{File-level debloating:} Given that the source code of web
+applications spans tens or hundreds of different files, we can completely
+remove a file, when none of the lines of code in that file were executed
+during the stimulation of the web application.
+  \item \textbf{Function-level debloating:} In function-level debloating, not
+only can we remove entire files but we can also selectively remove some of
+the functions contained in other files. This is a more fine-grained approach
+which allows us to remove more code, than the more conservative, file-level
+debloating strategy.
+\end{itemize}
+
+More fine-grained approaches are possible, such as, the removal of specific code statements from retained functions which were not exercised during stimulation.
+However, such changes essentially modify the logic of a function (e.g. removing
+conditional code blocks) thereby increasing the probability of breaking the
+resulting program when a minute change of a client-side request would lead the
+execution into these blocks of code.
+
+\subsection{Detecting the execution of removed code}
+We replace all removed functions and files with placeholders which, if executed,
+have the following tasks:
+
+\begin{itemize}
+  \item \textbf{Exit the application:} If a placeholder happens to be triggered,
+the PHP application will start its shutdown procedures. This way, the
+application does not enter an unexpected state that was not planned by the
+debloating process.
+  \item \textbf{Record information about the missing function:} In order
+to better understand which missing placeholders were triggered and how,
+our framework logs several pieces of information, such as, the URL that
+triggered the execution of the removed code, the name of the class and
+function of the removed code, and the
+corresponding line numbers.
+\end{itemize}
+
+To ensure that the debloating process has preserved the functionality of
+the debloated web application, we rerun all the Selenium-mapped tutorials and monkey scripts
+after the debloating stage. If our placeholder code for removed files and
+functions executes during this stage, this means that this code should not
+have been removed.
+
+This feedback mechanism proved invaluable during the development of
+our framework since it helped us identify problems with our coverage
+logic which in turn revealed the challenges that we described in
+Section~\ref{subsubsec:challenges}.

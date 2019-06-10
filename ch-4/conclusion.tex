@@ -1,1 +1,28 @@
-In this work, we explain how to use the puthesis.cls class file and the accompanying template.  
+\section{Conclusion}
+In this project, we analyzed the impact of removing unnecessary code in modern
+web applications through a process called \textit{software debloating}.
+We presented the pipeline details of the end-to-end, modular debloating
+framework that we designed and implemented, allowing us to record how a
+PHP application is used and what server-side code is triggered as a result of
+client-side requests. After retrieving code-coverage information, our debloating
+framework removes unused parts of
+an application using file-level and function-level debloating.
+
+By evaluating
+our framework on four popular PHP applications (phpMyAdmin, MediaWiki,
+Magento, and WordPress) we witnessed the clear security benefits of debloating web
+applications. We observed a significant LLOC decrease ranging between
+9\% to 64\% for file-level debloating and up to an additional 24\% with
+function-level debloating. Next, we showed that external packages are one
+of the primary source of bloat as our debloating framework was able to remove
+more than 84\% of unused code in versions that used Composer, PHP's most popular
+package manager. By quantifying the removal of code associated with critical
+CVEs, we observed a reduction of up to 60\% of high-impact, historical vulnerabilities.
+Finally, we showed that the process of debloating also removes
+instructions and classes that are the primary sources for attackers to build
+gadgets and perform POI attacks.
+
+Our results demonstrate that debloating web applications
+provides tangible security benefits and therefore should be seriously
+considered as a practical way of reducing the attack surface of
+web-applications deployments.

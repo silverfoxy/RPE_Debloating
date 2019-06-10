@@ -31,7 +31,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
 %%%% Author & title page info
 
-\title{Attack Surface Reduction \\ Through Software Debloating}
+\title{Web Application Attack Surface Reduction Through Software Debloating}
 
 \submitted{July 2019}  % degree conferral date (January, April, June, September, or November)
 \copyrightyear{2019}  % year in which the copyright is secured by publication of the dissertation.
@@ -139,6 +139,37 @@
 \fi % proquest or online formatting
 \fi % printed or online formatting
 
+\usepackage{listings}
+
+\usepackage{color, colortbl}
+
+\definecolor{dkgreen}{rgb}{0,.6,0}
+\definecolor{dkblue}{rgb}{0,0,.8}
+\definecolor{dkyellow}{cmyk}{0,0,.8,.6}
+\definecolor{lightgray}{gray}{0.75}
+
+\lstset{
+  language        = c++,
+  basicstyle      = \fontsize{7.5}{9}\ttfamily,
+  keywordstyle    = \color{dkyellow},
+  stringstyle     = \color{red},
+  identifierstyle = \color{dkblue},
+  commentstyle    = \color{gray},
+  numbers         =left,
+  xleftmargin     =0.65cm,
+  emph            =[1]{php},
+  emphstyle       =[1]\color{black},
+  emph            =[2]{if,and,or,else},
+emphstyle =[2]\color{dkyellow}
+}
+
+\usepackage{subcaption}
+
+\usepackage{graphicx}
+
+\usepackage{fontawesome}
+\def\faChecked{\FA\symbol{"F00C}}
+\def\faCrossed{\FA\symbol{"F00D}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
 %%%% Define commands
@@ -184,7 +215,7 @@
 \ifodd 0
 % front-matter disabled while writing chapters
 \renewcommand{\maketitlepage}{}
-\renewcommand*{\makecopyrightpage}{}
+%\renewcommand*{\makecopyrightpage}{}
 \renewcommand*{\makeabstract}{}
 
 % you can just skip the \acknowledgements and \dedication commands to leave out these sections.
@@ -239,7 +270,7 @@
 \include{ch-3/experiments}
 \include{ch-4/results}
 \appendix % all chapters following will be labeled as appendices
-\include{ch-appendicies/implementation}
+\include{ch-appendicies/appendices}
 
 
 % Make the bibliography single spaced
