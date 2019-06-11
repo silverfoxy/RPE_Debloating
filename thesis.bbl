@@ -359,6 +359,12 @@ Yonghee Shin and Laurie Williams.
 \newblock In {\em Proceedings of the Second ACM-IEEE international symposium on
   Empirical software engineering and measurement}. ACM, 2008.
 
+\bibitem{Snyder2017}
+Peter Snyder, Cynthia Taylor, and Chris Kanich.
+\newblock {Most Websites Don't Need to Vibrate: A Cost-Benefit Approach to
+  Improving Browser Security}.
+\newblock 2017.
+
 \bibitem{snyder2017vibrate}
 Peter Snyder, Cynthia Taylor, and Chris Kanich.
 \newblock {Most Websites Don'T Need to Vibrate: A Cost-Benefit Approach to

@@ -43,45 +43,46 @@ Warning--to sort, need author or key in wordpressPlugin
 Warning--empty year in jiang2016Jred
 Warning--there's a number but no volume in mccabe1976complexity
 Warning--there's a number but no volume in Schwarz2018
-You've used 76 entries,
+Warning--empty journal in Snyder2017
+You've used 77 entries,
             2118 wiz_defined-function locations,
-            838 strings with 16239 characters,
-and the built_in function-call counts, 18089 in all, are:
-= -- 1666
-> -- 795
+            841 strings with 16351 characters,
+and the built_in function-call counts, 18359 in all, are:
+= -- 1690
+> -- 813
 < -- 2
-+ -- 336
-- -- 260
-* -- 988
-:= -- 2766
-add.period$ -- 207
-call.type$ -- 76
-change.case$ -- 362
++ -- 343
+- -- 266
+* -- 1005
+:= -- 2816
+add.period$ -- 210
+call.type$ -- 77
+change.case$ -- 368
 chr.to.int$ -- 0
-cite$ -- 111
-duplicate$ -- 747
-empty$ -- 1822
-format.name$ -- 260
-if$ -- 4026
+cite$ -- 113
+duplicate$ -- 757
+empty$ -- 1839
+format.name$ -- 266
+if$ -- 4078
 int.to.chr$ -- 0
-int.to.str$ -- 76
-missing$ -- 36
-newline$ -- 345
-num.names$ -- 76
-pop$ -- 618
+int.to.str$ -- 77
+missing$ -- 37
+newline$ -- 350
+num.names$ -- 78
+pop$ -- 626
 preamble$ -- 1
-purify$ -- 287
+purify$ -- 292
 quote$ -- 0
-skip$ -- 557
+skip$ -- 564
 stack$ -- 0
-substring$ -- 380
+substring$ -- 385
 swap$ -- 94
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 302
-warning$ -- 35
-while$ -- 76
-width$ -- 78
-write$ -- 702
-(There were 35 warnings)
+type$ -- 306
+warning$ -- 36
+while$ -- 78
+width$ -- 79
+write$ -- 711
+(There were 36 warnings)

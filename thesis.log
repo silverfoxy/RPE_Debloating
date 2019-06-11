@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.23)  10 JUN 2019 12:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.23)  11 JUN 2019 12:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -469,7 +469,7 @@ Chapter 3.
 
 
 ] [9]) (./ch-3/setup.tex
-<figures/DebloatingPipeline.pdf, id=366, 513.83968pt x 202.8378pt>
+<figures/DebloatingPipeline.pdf, id=382, 513.83968pt x 202.8378pt>
 File: figures/DebloatingPipeline.pdf Graphic file (type pdf)
 <use figures/DebloatingPipeline.pdf>
 Package pdftex.def Info: figures/DebloatingPipeline.pdf  used on input line 9.
@@ -507,27 +507,27 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <7.5> not available
  (./ch-4/results.tex
 Chapter 4.
 (./ch-4/results_section.tex
-<figures/venn_legend.pdf, id=557, 821.124pt x 86.724pt>
+<figures/venn_legend.pdf, id=573, 821.124pt x 86.724pt>
 File: figures/venn_legend.pdf Graphic file (type pdf)
 <use figures/venn_legend.pdf>
 Package pdftex.def Info: figures/venn_legend.pdf  used on input line 16.
 (pdftex.def)             Requested size: 303.53267pt x 32.05826pt.
-<figures/venn_pma.pdf, id=558, 700.19527pt x 689.76569pt>
+<figures/venn_pma.pdf, id=574, 700.19527pt x 689.76569pt>
 File: figures/venn_pma.pdf Graphic file (type pdf)
 <use figures/venn_pma.pdf>
 Package pdftex.def Info: figures/venn_pma.pdf  used on input line 21.
 (pdftex.def)             Requested size: 95.39693pt x 93.96687pt.
-<figures/venn_mwk.pdf, id=559, 700.19527pt x 689.76569pt>
+<figures/venn_mwk.pdf, id=575, 700.19527pt x 689.76569pt>
 File: figures/venn_mwk.pdf Graphic file (type pdf)
 <use figures/venn_mwk.pdf>
 Package pdftex.def Info: figures/venn_mwk.pdf  used on input line 26.
 (pdftex.def)             Requested size: 95.39693pt x 93.96687pt.
-<figures/venn_mgt.pdf, id=560, 700.19527pt x 689.76569pt>
+<figures/venn_mgt.pdf, id=576, 700.19527pt x 689.76569pt>
 File: figures/venn_mgt.pdf Graphic file (type pdf)
 <use figures/venn_mgt.pdf>
 Package pdftex.def Info: figures/venn_mgt.pdf  used on input line 31.
 (pdftex.def)             Requested size: 95.39693pt x 93.96687pt.
-<figures/venn_wp.pdf, id=561, 700.19527pt x 689.76569pt>
+<figures/venn_wp.pdf, id=577, 700.19527pt x 689.76569pt>
 File: figures/venn_wp.pdf Graphic file (type pdf)
 <use figures/venn_wp.pdf>
 Package pdftex.def Info: figures/venn_wp.pdf  used on input line 36.
@@ -553,20 +553,20 @@ pdfTeX warning: pdflatex (file ./figures/venn_mgt.pdf): PDF inclusion: multiple
 pdfTeX warning: pdflatex (file ./figures/venn_wp.pdf): PDF inclusion: multiple 
 pdfs with page group included in a single page
 >]
-<figures/lloc.pdf, id=630, 1230.65399pt x 901.18358pt>
+<figures/lloc.pdf, id=646, 1230.65399pt x 901.18358pt>
 File: figures/lloc.pdf Graphic file (type pdf)
 <use figures/lloc.pdf>
 Package pdftex.def Info: figures/lloc.pdf  used on input line 77.
 (pdftex.def)             Requested size: 433.62pt x 317.53662pt.
  [27] [28 <./figures/lloc.pdf>]
-<figures/cc_over_loc.pdf, id=660, 989.3807pt x 366.24487pt>
+<figures/cc_over_loc.pdf, id=676, 989.3807pt x 366.24487pt>
 File: figures/cc_over_loc.pdf Graphic file (type pdf)
 <use figures/cc_over_loc.pdf>
 Package pdftex.def Info: figures/cc_over_loc.pdf  used on input line 124.
 (pdftex.def)             Requested size: 433.62pt x 160.51115pt.
  [29] [30 <./figures/cc_over_loc.pdf>]
 [31]
-<figures/vuln_per_category.pdf, id=695, 742.65265pt x 384.5592pt>
+<figures/vuln_per_category.pdf, id=711, 742.65265pt x 384.5592pt>
 File: figures/vuln_per_category.pdf Graphic file (type pdf)
 <use figures/vuln_per_category.pdf>
 Package pdftex.def Info: figures/vuln_per_category.pdf  used on input line 204.
@@ -618,7 +618,7 @@ Overfull \hbox (3.11835pt too wide) in paragraph at lines 508--520
  []
 
 [42]
-<figures/cpu.pdf, id=808, 630.4899pt x 205.08212pt>
+<figures/cpu.pdf, id=824, 630.4899pt x 205.08212pt>
 File: figures/cpu.pdf Graphic file (type pdf)
 <use figures/cpu.pdf>
 Package pdftex.def Info: figures/cpu.pdf  used on input line 540.
@@ -706,7 +706,7 @@ n-akis.
  []
 
 [53] [54]
-Overfull \hbox (31.0466pt too wide) in paragraph at lines 383--388
+Overfull \hbox (31.0466pt too wide) in paragraph at lines 389--394
 \OT1/cmtt/m/n/12 npm / the-[]state-[]of-[]javascript-[]frameworks-[]2017-[]part
 -[]2-[]the-[]react-[]ecosystem$[]\OT1/cmr/m/n/12 ,
  []
@@ -734,10 +734,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 291.
  )
 (\end occurred when \ifodd on line 215 was incomplete) 
 Here is how much of TeX's memory you used:
- 10435 strings out of 492982
- 155450 string characters out of 6134896
- 300477 words of memory out of 5000000
- 13589 multiletter control sequences out of 15000+600000
+ 10437 strings out of 492982
+ 155477 string characters out of 6134896
+ 300510 words of memory out of 5000000
+ 13590 multiletter control sequences out of 15000+600000
  10402 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,19n,58p,1093b,1236s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -754,10 +754,10 @@ msfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on thesis.pdf (61 pages, 4003576 bytes).
+Output written on thesis.pdf (61 pages, 4004437 bytes).
 PDF statistics:
- 1045 PDF objects out of 1200 (max. 8388607)
- 895 compressed objects within 9 object streams
- 233 named destinations out of 1000 (max. 500000)
+ 1062 PDF objects out of 1200 (max. 8388607)
+ 911 compressed objects within 10 object streams
+ 234 named destinations out of 1000 (max. 500000)
  315 words of extra memory for PDF output out of 10000 (max. 10000000)
 
