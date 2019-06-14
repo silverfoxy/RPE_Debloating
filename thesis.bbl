@@ -38,6 +38,10 @@
 {less.js ported to PHP}.
 \newblock \url{https://github.com/oyejorge/less.php}.
 
+\bibitem{noscript}
+{NoScript browser extension}.
+\newblock \url{https://noscript.net/}.
+
 \bibitem{PHPAutoload}
 {PHP autoload built-in function}.
 \newblock \url{http://php.net/manual/en/language.oop5.autoload.php}.

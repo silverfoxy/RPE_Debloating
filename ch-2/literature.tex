@@ -15,7 +15,6 @@ software stack have been studied in the context of software debloating. The key 
 
 
 \subsection{Debloating for the web}
-
 Despite the importance of the web platform, there has been very little work that attempts to apply debloating to it. Snyder et al. investigated the costs and
 benefits of giving websites access to all available browser features through
 JavaScript~\cite{snyder2017vibrate}. The authors evaluated the use of different
@@ -40,6 +39,26 @@ to CVEs. Contrastingly, by focusing on popular web applications, and utilizing f
 able to precisely quantify the reduction of vulnerabilities, both in terms
 of known CVEs as well as gadgets for PHP object-injection attacks.
 
+\subsubsection{Most Websites Don’t Need to Vibrate}
+This work targets the HTML Standards and browser APIs exposed to JavaScript~\cite{snyder2017vibrate}.
+\paragraph{Definition of bloat:} Bloat is defined as the set of browser standards that expose high cost and low benefit. Cost of a standard is defined as a function of historic CVEs affecting the standard, academic papers introducing attacks abusing the standards and number of lines of code in C++, used exclusively to implement the standard. Conversely, the benefit is a function of number of websites that require that feature to function correctly. The judgement of correct functionionality is as perceived by end users while casually browsing through websites.
+\paragraph{Identification of bloat:} Based on the cost of each feature, and the number of websites that use that feature, the decision is made to remove individual standards. Through a set of user studies, two users browser top Alexa websites and report if removal of each feature breaks the functionality of these websites. Mapping the JavaScript API to its backend C++ code is a challenging task. To that end, a call graph is generated. By following the path from JavaScript APIs to auto-generated bindings and then to the C++ implementation of each feature, the authors find functions within the source code that exclusively implement each functionality. Figure~\ref{x} depicts the two output of two iterations used to find Battery API functions.
+\paragraph{Evaluation \& metrics:} CVE reduction and removed lines of code are the two metrics reported by the authors of this work. Moreover, they propose two modes of debloating: ``Conservative'' and ``Aggressive''. The former tries to keep most number of websites functional and the latter focuses on attack surface reduction. Overall, the results of both modes are promising. They break less websites when compared to NoScript browser extension~\cite{noscript} and have a comparable website break rate to Tor browser.
+
+After identifying the risky and less used features, the JavaScript APIs are removed to prevent websites from accessing them. To that end, a browser extension injects a JavaScript object to proxy the desired objects and their properties such that
+calls to removed code fails gracefully. To prevent introducing new vulnerabilities, WebCrypto APIs are whitelisted.
+
+% Limitations: only target preauth
+
+By mapping 1,544 CVEs to 175 web standards within Firefox browser, the authors show that a reduction of 66\% of standards is possible with no noticeable effect on users experience. By preventing untrusted websites from accessing such features the attack surface can be reduced to a great extent.
+
+\subsubsection{Dead Code Elimination for Web Systems Written in PHP: Lessons Learned from an Industry Case}
+This work focuses on PHP applications and proposes a system that dynamically detects dead code and eliminates it. The authors goal is to increase the maintainability of the software by eliminating unused files and reducing the total number of files that the developers have to maintain.
+\paragraph{Definition of bloat:} Unused code with file level granularity is the target of this work.
+\paragraph{Identification of bloat:} Using their system, the authors are able to detect unused files over time. Based on factors such as ``First usage'', ``Number of invocations'', ``Last time used'' and ``Version control last update'', potentially dead files are dynamically discovered and removed. Their approach, that is based on dynamic code coverage faces several inherent challenges. First, some files are rarely used despite not being totally useless. Examples of such files would be scheduled tasks that run monthly or products that are purchased very rarely. In addition to that, error handlers and files under development also receive minimal code coverage from users of the application. As such, a whitelisting mechanism is used in addition to version control system timestamps to detect the last time a file was updated.
+\paragraph{Evaluation \& metrics:} With the main forcus of this paper being software engineering, only the file coverage is reported and security implications of using this type of debloating has not been discussed. As the first step in our work, we implement file level debloating and also report on the security effects of this method.
+
+After gathering dynamic code coverage on real deployments of multiple PHP applications used by an industry partner, a reduction of 27\% to 64\% in the number of files is achieved. For different subsystems, it took 1 to 5 months for the code coverage to stabilize, meaning no new files were covered during execution of the application.
 
 \subsection{Debloating in other platforms}
 

@@ -12,6 +12,7 @@ Warning--to sort, need author or key in xss
 Warning--to sort, need author or key in csrf
 Warning--to sort, need author or key in rce
 Warning--to sort, need author or key in sqlInjection
+Warning--to sort, need author or key in noscript
 Warning--to sort, need author or key in pypiDownloads
 Warning--to sort, need author or key in packagistDownloads
 Warning--to sort, need author or key in symfonyVulnerability
@@ -44,45 +45,45 @@ Warning--empty year in jiang2016Jred
 Warning--there's a number but no volume in mccabe1976complexity
 Warning--there's a number but no volume in Schwarz2018
 Warning--empty journal in Snyder2017
-You've used 77 entries,
+You've used 78 entries,
             2118 wiz_defined-function locations,
-            841 strings with 16351 characters,
-and the built_in function-call counts, 18359 in all, are:
-= -- 1690
-> -- 813
+            844 strings with 16414 characters,
+and the built_in function-call counts, 18518 in all, are:
+= -- 1705
+> -- 814
 < -- 2
-+ -- 343
++ -- 344
 - -- 266
-* -- 1005
-:= -- 2816
-add.period$ -- 210
-call.type$ -- 77
-change.case$ -- 368
+* -- 1010
+:= -- 2833
+add.period$ -- 212
+call.type$ -- 78
+change.case$ -- 371
 chr.to.int$ -- 0
-cite$ -- 113
-duplicate$ -- 757
-empty$ -- 1839
+cite$ -- 115
+duplicate$ -- 764
+empty$ -- 1862
 format.name$ -- 266
-if$ -- 4078
+if$ -- 4118
 int.to.chr$ -- 0
-int.to.str$ -- 77
+int.to.str$ -- 78
 missing$ -- 37
-newline$ -- 350
+newline$ -- 354
 num.names$ -- 78
-pop$ -- 626
+pop$ -- 634
 preamble$ -- 1
-purify$ -- 292
+purify$ -- 294
 quote$ -- 0
-skip$ -- 564
+skip$ -- 572
 stack$ -- 0
-substring$ -- 385
-swap$ -- 94
+substring$ -- 390
+swap$ -- 95
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 306
-warning$ -- 36
+type$ -- 310
+warning$ -- 37
 while$ -- 78
-width$ -- 79
-write$ -- 711
-(There were 36 warnings)
+width$ -- 80
+write$ -- 718
+(There were 37 warnings)
