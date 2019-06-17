@@ -1,7 +1,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of the architecture of our pipeline for debloating web applications and assessing the effects of different debloating strategies.\relax }}{15}{figure.caption.25}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of the architecture of our pipeline for debloating web applications and assessing the effects of different debloating strategies.\relax }}{16}{figure.caption.25}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Venn Diagrams showing covered files during the execution of Tutorials, Crawler, Monkey testing and Vulnerability scanner\relax }}{31}{figure.caption.34}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Logical Lines of Code before and after debloating\relax }}{33}{figure.caption.37}

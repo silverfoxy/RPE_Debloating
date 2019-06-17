@@ -1,6 +1,10 @@
 
 \chapter{Design \& Methodology\label{ch:usage}}
-In this section, we start by looking at the code reuse and external dependencies as the main source of bloat for web applications, and then describe the design and implementation details of our debloating pipeline.
+Debloating has been applied to different parts of the software stack ranging from operating systems to containers and even executable binaries. Likewise, we also expect the web applications to benefit from this method of attack surface reduction.
+To quantify the extend to which various web applications are affected by debloating is the main research question of this study. The general architecture of web applications and their attack vectors are different than binaries.
+Based on this observation, debloating mechanisms that remove dead code and make exploitation harder by reducing the number of available gadgets only provide marginal benefit. By removing the actual vulnerabilities, we can cover a wider range of attacks.
+
+Furtheremore, web applications are inherently more dynamic than compiled binaries. Decisions are made on the fly and its typical to dynamically load code at runtime. This makes static analysis even more complicated and less accurate. As a result, we rely on dynamic analysis and usage profiling to detect bloat. In the remainder of this section, we take a look at code reuse and external dependencies as the main source of bloat for web applications, and then describe the design and implementation details of our debloating pipeline.
 \section{Background}
 \input{ch-3/background}
 \input{ch-3/setup}
