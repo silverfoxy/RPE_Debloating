@@ -1,10 +1,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of the architecture of our pipeline for debloating web applications and assessing the effects of different debloating strategies.\relax }}{12}{figure.caption.15}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of the architecture of our pipeline for debloating web applications and assessing the effects of different debloating strategies.\relax }}{15}{figure.caption.25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Venn Diagrams showing covered files during the execution of Tutorials, Crawler, Monkey testing and Vulnerability scanner\relax }}{28}{figure.caption.24}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Logical Lines of Code before and after debloating\relax }}{30}{figure.caption.27}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Evolution of cyclomatic complexity before and after debloating\relax }}{32}{figure.caption.31}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Vulnerability Categories\relax }}{34}{figure.caption.34}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Measurement of the CPU consumption for the tested web applications. 100\% corresponds to the use of a single CPU core.\relax }}{45}{figure.caption.47}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Venn Diagrams showing covered files during the execution of Tutorials, Crawler, Monkey testing and Vulnerability scanner\relax }}{31}{figure.caption.34}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Logical Lines of Code before and after debloating\relax }}{33}{figure.caption.37}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Evolution of cyclomatic complexity before and after debloating\relax }}{35}{figure.caption.41}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Vulnerability Categories\relax }}{37}{figure.caption.44}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Measurement of the CPU consumption for the tested web applications. 100\% corresponds to the use of a single CPU core.\relax }}{48}{figure.caption.57}
