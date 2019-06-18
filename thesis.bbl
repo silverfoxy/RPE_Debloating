@@ -5,6 +5,10 @@
 \newblock
   \url{https://www.php.net/manual/en/ini.core.php#ini.auto-append-file}.
 
+\bibitem{autosuggest_vulnerability}
+{AutoSuggest 0.24 WordPress plugin Exploit}.
+\newblock \url{https://www.exploit-db.com/exploits/45977}.
+
 \bibitem{burpsuite}
 {Burp Suite web vulnerability scanner}.
 \newblock \url{https://portswigger.net/burp}.

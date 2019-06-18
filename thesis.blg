@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2018)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: ch-1/introduction.aux
@@ -41,49 +41,50 @@ Warning--to sort, need author or key in twentyfourteen_theme
 Warning--to sort, need author or key in twentytwelve_theme
 Warning--to sort, need author or key in zendframework1
 Warning--to sort, need author or key in wordpressPlugin
+Warning--to sort, need author or key in autosuggest_vulnerability
 Warning--empty year in jiang2016Jred
 Warning--there's a number but no volume in mccabe1976complexity
 Warning--there's a number but no volume in Schwarz2018
 Warning--empty journal in Snyder2017
-You've used 78 entries,
+You've used 79 entries,
             2118 wiz_defined-function locations,
-            844 strings with 16414 characters,
-and the built_in function-call counts, 18518 in all, are:
-= -- 1705
-> -- 814
+            847 strings with 16529 characters,
+and the built_in function-call counts, 18677 in all, are:
+= -- 1720
+> -- 815
 < -- 2
-+ -- 344
++ -- 345
 - -- 266
-* -- 1010
-:= -- 2833
-add.period$ -- 212
-call.type$ -- 78
-change.case$ -- 371
+* -- 1015
+:= -- 2850
+add.period$ -- 214
+call.type$ -- 79
+change.case$ -- 374
 chr.to.int$ -- 0
-cite$ -- 115
-duplicate$ -- 764
-empty$ -- 1862
+cite$ -- 117
+duplicate$ -- 771
+empty$ -- 1885
 format.name$ -- 266
-if$ -- 4118
+if$ -- 4158
 int.to.chr$ -- 0
-int.to.str$ -- 78
+int.to.str$ -- 79
 missing$ -- 37
-newline$ -- 354
+newline$ -- 358
 num.names$ -- 78
-pop$ -- 634
+pop$ -- 642
 preamble$ -- 1
-purify$ -- 294
+purify$ -- 296
 quote$ -- 0
-skip$ -- 572
+skip$ -- 580
 stack$ -- 0
-substring$ -- 390
-swap$ -- 95
+substring$ -- 395
+swap$ -- 96
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 310
-warning$ -- 37
+type$ -- 314
+warning$ -- 38
 while$ -- 78
-width$ -- 80
-write$ -- 718
-(There were 37 warnings)
+width$ -- 81
+write$ -- 725
+(There were 38 warnings)

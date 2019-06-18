@@ -132,6 +132,12 @@ security checks and prevent them from being removed.
 
 Secondly, the generation of high level program specifications is a non-trivial task. In the example of ``tar'' archive software discussed in the paper, only a set of simple compression and decompression tests are performed. This approach can potentially open the door to new and hidden vulnerabilities, introduced after debloating.
 
-\subsubsection{Shachee}
+\subsubsection{Shredder: Breaking Exploits through API Specialization}
+Mishra et. al. presented an API specialization scheme for closed source binaries~\cite{mishra2018shredder}. The main idea is to characterize how legitimate applications use sensitive APIs compared to exploit attempts. By generating policies that
+whitelist legitimate use of these APIs, they can break more than 86\% of existing shell codes on 10 Windows applications in their dataset and all stop ROP exploits for 8/10 applications.
 
-\subsubsection{Config Driven}
+\paragraph{Definition of bloat:} Instead of only focusing on unused code, they define policies to limit the set of parameters passed to the APIs.
+\paragraph{Identification of bloat:} Based on static analysis and backward propagation from sensitive APIs, the authors are able to find call sites and move backwards to extract possible values for parameters passed to these functions wherever possible. This approach is not able to identify values passed to every API call across the application due to limitations of static analysis. But this best effort approach can be coupled with control flow integrity to prevent calls to the sensitive APIs from unseen locations during an exploit attempt.
+\paragraph{Evaluation \& metrics:} Current implementation of API specialization does not actually remove unused code, rather, by enforcing policies, it limits possible invocation of sensitive APIs. This method can be coupled with other debloating strategies to remove the corresponding code. As such, the authors report the number of broken shell codes before and after applying the policies.
+
+API specialization tries to distinguish the different characteristics of benign and malicious execution of the program. The same idea can be applied to web applications, but static analysis is more limited on dynamic web programming languages such as PHP. Therefore, a combination of dynamic usage profiling and API specialization can be used as an extra step to further debloat a web application after source code debloating.
