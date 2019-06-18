@@ -4,7 +4,7 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Related Work}{4}{chapter.2}
 \contentsline {subsection}{\numberline {2.0.1}Debloating for the web}{5}{subsection.2.0.1}
-\contentsline {subsubsection}{Most Websites Don\IeC {\textquoteright }t Need to Vibrate}{6}{section*.7}
+\contentsline {subsubsection}{Most Websites Don't Need to Vibrate}{6}{section*.7}
 \contentsline {paragraph}{Definition of bloat:}{6}{section*.8}
 \contentsline {paragraph}{Identification of bloat:}{6}{section*.9}
 \contentsline {paragraph}{Evaluation \& metrics:}{7}{section*.10}
