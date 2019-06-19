@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.12)  18 JUN 2019 19:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.12)  19 JUN 2019 13:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -766,7 +766,7 @@ texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/babak/
 .texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc2074.600pk></usr/share/t
 exlive/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on thesis.pdf (73 pages, 4170804 bytes).
+Output written on thesis.pdf (73 pages, 4171098 bytes).
 PDF statistics:
  1794 PDF objects out of 2073 (max. 8388607)
  1058 compressed objects within 11 object streams

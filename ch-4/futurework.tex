@@ -2,7 +2,7 @@
 In this section, we will discuss the future directions and improvements to our current prototype that we are willing to pursue in future.
 
 \subsection{End-to-end web application debloating}
-In this work, we show that web application debloating has the potential to significantly reduce the attack surface. Nevertheless, it comes with a set of challenges.
+In this work, we showed that web application debloating has the potential to significantly reduce the attack surface despite the challenges involved. Next, we discuss some of these challenges and propose directions for our future work on this topic.
 
 \subsubsection{Handling calls to removed code}
 One of the biggest challenges of using debloating in production applications is handling calls to removed functions. In our current implementation, upon executing a function that leads to debloated code, user's operation is terminated. Then the user is notified that the intended functionality has been removed. This can happen after clicking on a link, or after several steps into filling a multi-step form. To make this more user friendly and enable website administrators to make the final decision, we envision several improvements:
@@ -22,7 +22,7 @@ Current debloating setup will show error messages to users, when they execute re
   \label{fig:uidebloating}
 \end{figure}
 
-\paragraph{Implementation details:} Web applications consist of two main components, server side and clientside. Client-side code runs on users browsers and generate HTTP requests based on user interactions with HTML and JavaScript components on the page. From server's point of view, generation of HTML content and events received from the browser are totally disconnected. The goal is to build this bridge and track server side events as the result of client side interactions with minimal reliance on certain application architectures.
+\paragraph{Implementation details:} Web applications consist of two main components, server side and client side. Client side code runs on users browsers and generate HTTP requests based on user interactions with HTML and JavaScript components on the page. From server's point of view, generation of HTML content and events received from the browser are totally disconnected. The goal is to build this bridge and track server side events as the result of client side interactions with minimal reliance on certain application architectures.
 
 Figure~\ref{fig:uidebloating} depicts the browser interactions required to detect and disable debloated actions on client side. Initially, PHP code is injected into all pages of the web application to add tracker cookies that are sent along page events that are reported to the server. During first user interaction with the page at step 2 (e.g., Form submission, click on a link, etc.), by correlating the events and UI elements that triggered the request through the cookie values, we are able to find elements and forms that trigger debloated events. The next time users request the same page, at step 3, the elements that triggered debloated actions are disabled through injected JavaScript.
 

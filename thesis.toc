@@ -9,7 +9,7 @@
 \contentsline {paragraph}{Identification of bloat:}{6}{section*.9}
 \contentsline {paragraph}{Evaluation \& metrics:}{7}{section*.10}
 \contentsline {subsubsection}{Dead Code Elimination for Web Systems Written in PHP: Lessons Learned from an Industry Case}{7}{section*.11}
-\contentsline {paragraph}{Definition of bloat:}{7}{section*.12}
+\contentsline {paragraph}{Definition of bloat:}{8}{section*.12}
 \contentsline {paragraph}{Identification of bloat:}{8}{section*.13}
 \contentsline {paragraph}{Evaluation \& metrics:}{8}{section*.14}
 \contentsline {subsection}{\numberline {2.0.2}Debloating in other platforms}{8}{subsection.2.0.2}
@@ -22,8 +22,8 @@
 \contentsline {paragraph}{Identification of bloat:}{11}{section*.21}
 \contentsline {paragraph}{Evaluation \& metrics:}{11}{section*.22}
 \contentsline {subsubsection}{Shredder: Breaking Exploits through API Specialization}{12}{section*.23}
-\contentsline {paragraph}{Definition of bloat:}{12}{section*.24}
-\contentsline {paragraph}{Identification of bloat:}{12}{section*.25}
+\contentsline {paragraph}{Definition of bloat:}{13}{section*.24}
+\contentsline {paragraph}{Identification of bloat:}{13}{section*.25}
 \contentsline {paragraph}{Evaluation \& metrics:}{13}{section*.26}
 \contentsline {chapter}{\numberline {3}Design \& Methodology}{14}{chapter.3}
 \contentsline {section}{\numberline {3.1}Background}{15}{section.3.1}

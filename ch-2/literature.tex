@@ -7,9 +7,9 @@ software stack have been studied in the context of software debloating. The key 
 \begin{enumerate}
   \item{\textbf{What is being removed and the definition of bloat:} On one hand removing dead code from included libraries and external dependencies has been studied~\cite{jiang2016Jred, jiang2018reddroid, quach2018debloating}. While this approach does not
   target the actual vulnerable parts of the code (e.g., the source of a buffer overflow), it will raise the bar for attackers to exploit such systems by removing gadgets used in Return Oriented Programming (ROP)~\cite{shacham2007geometry}.
-  On the other hand, similar to our work, there are approaches that target the actual features that are unused under certain circumstances~\cite{boomsma2012Dead, heo2018effective, regehr2012CReduce, Snyder2017, sun2018perses}. By defining the bloat as unused code in the applications, as we show later in the results section for web applications, one can mitigate the vulnerable pieces of code and reduce the attack surface of applications significantly.}
+  On the other hand, similar to our work, there are approaches that target the actual features that are unused under certain circumstances~\cite{boomsma2012Dead, heo2018effective, regehr2012CReduce, Snyder2017, sun2018perses}. By defining the bloat as unused code in the applications, as we show later in the results section for web applications, one can remove the vulnerable pieces of code and reduce the attack surface of applications significantly.}
   \item{\textbf{Identification of bloat:} The other difference arises from the underlying mechanism used to identify the bloat. Depending on target application and the platform, static analysis might need to be augmented by dynamic analysis to detect
-  unused code. In addition to that, the literature has incorporated application configuration files~\cite{Koo:2019:CSD:3301417.3312501}, high level manual specifications~\cite{heo2018effective, sharif2018Trimmer} and usage profiles~\cite{boomsma2012Dead} with dynamic application instrumentation to detect unused code. Contrastingly, Delta Debugging is used~\cite{zeller2002Delta}. This approach is different in that it starts by removing lines of source code and then verifies if the reduction is valid~\cite{heo2018effective, regehr2012CReduce, sun2018perses}.}
+  unused code. In addition to that, the literature has incorporated application configuration files~\cite{Koo:2019:CSD:3301417.3312501}, high level manual specifications~\cite{heo2018effective, sharif2018Trimmer} and usage profiles~\cite{boomsma2012Dead} with dynamic application instrumentation to detect unused code. Contrastingly, Delta Debugging is used~\cite{zeller2002Delta}. This category of algorithms are different in that they start by removing lines of source code and then verify if the reduction is valid~\cite{heo2018effective, regehr2012CReduce, sun2018perses}.}
   \item{\textbf{Evaluation \& metrics:} Based on the context where debloating is introduced (e.g., To ease the debugging process, reduce the software footprint or reduce the attack surface) different metrics has been used to measure the success of debloating strategies. In the context of security, reduction in size of the target application (i.e., Size of the output binary or number of lines of code), reduction in the number of gadgets available for attackers and the number of removed historical vulnerabilities or exploits are measured and reported.}
 \end{enumerate}
 
@@ -39,16 +39,18 @@ to CVEs. Contrastingly, by focusing on popular web applications, and utilizing f
 able to precisely quantify the reduction of vulnerabilities, both in terms
 of known CVEs as well as gadgets for PHP object-injection attacks.
 
+Next, we will discuss two intances of related work that are more inline with our work, in more detail.
+
 \subsubsection{Most Websites Don't Need to Vibrate}
 This work targets the HTML Standards and browser APIs exposed to JavaScript~\cite{snyder2017vibrate}.
 \paragraph{Definition of bloat:} Bloat is defined as the set of browser standards that expose high cost and low benefit. Cost of a standard is defined as a function of historic CVEs affecting the standard, academic papers introducing attacks abusing the standard and number of lines of code in C++, used exclusively to implement the standard. Conversely, the benefit is a function of number of websites that require that feature to function correctly. The judgement of correct functionionality is as perceived by end users while casually browsing through websites.
 \paragraph{Identification of bloat:} Based on the cost of each feature, and the number of websites that use that feature, the decision is made to remove individual standards. Through a set of user studies, two users browser top Alexa websites and report if removal of each feature breaks the functionality of these websites.
 
 Mapping the JavaScript API to its backend C++ code is a challenging task. A call graph is generated to extract that information. By following the path from JavaScript APIs to auto-generated bindings and then to the C++ implementation of each feature, the authors find functions within the source code that exclusively implement each functionality.
-\paragraph{Evaluation \& metrics:} CVE reduction and removed lines of code are the two metrics reported by the authors of this work. Moreover, they propose two modes of debloating: ``Conservative'' and ``Aggressive''. The former tries to keep most number of websites functional and the latter focuses on attack surface reduction. Overall, the results of both modes are promising. They break less websites in comparison with NoScript browser extension~\cite{noscript} and have a comparable website break rate to Tor browser.
+ \paragraph{Evaluation \& metrics:} CVE reduction and removed lines of code are the two metrics reported by the authors of this work. Moreover, they propose two modes of debloating: ``Conservative'' and ``Aggressive''. The former tries to keep most number of websites functional and the latter focuses on attack surface reduction. Overall, the results of both modes are promising. They break less websites in comparison with NoScript browser extension~\cite{noscript} and have a comparable website break rate to Tor browser.
 
 After identifying the risky and less used features, the JavaScript APIs are removed to prevent websites from accessing them. The APIs are removed through a browser extension that injects a JavaScript proxy object to modify target APIs and their properties such that
-calls to removed code fails gracefully. Additionaly, to prevent introducing new vulnerabilities by gracefully blocking security related functions, WebCrypto APIs are whitelisted.
+calls to removed code fails gracefully. Additionaly, to prevent introducing new vulnerabilities due to gracefully blocked security related functions, WebCrypto APIs are whitelisted.
 
 % Limitations: only target preauth
 
@@ -109,11 +111,13 @@ Quach et al. adopted a different approach by bringing dead-code elimination bene
 %rastogi2017Cimplifier
 Rastogi et al. looked at debloating a container by partitioning it into smaller and more secure ones~\cite{rastogi2017Cimplifier}. They perform dynamic analysis on system-call logs to determine which components and executables are used in a container, in order to keep them. Koo et al. proposed configuration-driven debloating~\cite{Koo:2019:CSD:3301417.3312501}. Their system removes unused libraries loaded by applications under a specific configuration. They test their system on Nginx, VSFTPD, and OpenSSH and show a reduction of 78\% of code from Nginx libraries is possible based on specific configurations.
 
+Next, we discuss three instances of related work that are representative of the categories of debloating approaches.
+
 \subsubsection{Simplifying and Isolating Failure-Inducing Input}
 One line of work in the literature of software debloating is based on Delta Debugging algorithm. This idea was first introduced by Zeller et. al. in 2002~\cite{zeller2002Delta}.
 Given a failure inducing piece of code as input, Delta Debugging automatically minimizes the size of the test case by searching the program space for smaller pieces of code that would still cause the target application to run into error.
 
-\paragraph{Definition of bloat:} Under DD, bloat is defined as extra code in a failure inducing input, such that their removal does not affect the outcome of the execution of the program, which is to throw an error in this case.
+\paragraph{Definition of bloat:} Under Delta Debugging, bloat is defined as extra code in a failure inducing input, such that their removal does not affect the outcome of the execution of the program, which is to throw an error in this case.
 \paragraph{Identification of bloat:} The input is split into chunks of an arbitrary size n. Then the algorithm verifies if the first chunk or the n-1 chunks would cause the target application to crash. If neither would satisfy this goal, n is increased and the algorithm iterates using smaller chunks until we can isolate the part where the cause of the error lies. This way, we will end up with a minimal piece of code that still breaks the target test case.
 \paragraph{Evaluation \& metrics:} Minimizing the number of lines of input is the target of this algorithm. The performance of this system is measured as the execution time required to find the minimal input.
 
