@@ -9,4 +9,6 @@
 \contentsline {table}{\numberline {4.4}{\ignorespaces Features and external packages with the most removed files after file debloating (removed features are marked in italic). Entries marked with $\ast $ are packages that are indirectly pulled by other ``require-dev'' packages (not used by core application) for the purpose of test coverage reporting and coding standard enforcement.\relax }}{46}{table.caption.56}
 \contentsline {table}{\numberline {4.5}{\ignorespaces Verifying exploitability of vulnerabilities by testing exploits against original \& debloated web applications\relax }}{48}{table.caption.57}
 \contentsline {table}{\numberline {4.6}{\ignorespaces Measurements of the execution time, the CPU and memory consumption for the tested web applications with XDebug and Code Coverage (CC) and without XDebug. The reported values for the CPU and memory correspond to the average for each application.\relax }}{48}{table.caption.58}
-\contentsline {table}{\numberline {7}{\ignorespaces Comprehensive list of mapped CVEs and whether vulnerable files, functions or lines were triggered based on our usage profiles. Grey rows indicate CVEs located in modules that are, by default, disabled.\relax }}{61}{table.caption.68}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1}{\ignorespaces Comprehensive list of mapped CVEs and whether vulnerable files, functions or lines were triggered based on our usage profiles. Grey rows indicate CVEs located in modules that are, by default, disabled.\relax }}{62}{table.caption.68}

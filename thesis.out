@@ -19,7 +19,7 @@
 \BOOKMARK [1][-]{section.3.3}{3.3 Debloating web applications}{chapter.3}% 19
 \BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 Debloating strategies}{section.3.3}% 20
 \BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 Detecting the execution of removed code}{section.3.3}% 21
-\BOOKMARK [0][-]{chapter.4}{4 Results \046 Conclusion}{}% 22
+\BOOKMARK [0][-]{chapter.4}{4 Results}{}% 22
 \BOOKMARK [1][-]{section.4.1}{4.1 Results}{chapter.4}% 23
 \BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Tutorials vs. Monkey Testing vs. Crawling vs. Vulnerability Scanning}{section.4.1}% 24
 \BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 Debloating by the numbers}{section.4.1}% 25
@@ -29,7 +29,7 @@
 \BOOKMARK [2][-]{subsection.4.1.6}{4.1.6 Testing debloated web applications against real exploits}{section.4.1}% 29
 \BOOKMARK [1][-]{section.4.2}{4.2 Performance analysis}{chapter.4}% 30
 \BOOKMARK [1][-]{section.4.3}{4.3 Limitations}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.4}{4.4 Future work}{chapter.4}% 32
-\BOOKMARK [2][-]{subsection.4.4.1}{4.4.1 End-to-end web application debloating}{section.4.4}% 33
-\BOOKMARK [1][-]{section.4.5}{4.5 Conclusion}{chapter.4}% 34
+\BOOKMARK [0][-]{chapter.5}{5 Future work}{}% 32
+\BOOKMARK [1][-]{subsection.5.0.1}{5.0.1 End-to-end web application debloating}{chapter.5}% 33
+\BOOKMARK [0][-]{chapter.6}{6 Conclusion}{}% 34
 \BOOKMARK [0][-]{section*.69}{Bibliography}{}% 35
