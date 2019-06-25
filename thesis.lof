@@ -8,4 +8,6 @@
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Evolution of cyclomatic complexity before and after debloating\relax }}{36}{figure.caption.43}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Vulnerability Categories\relax }}{38}{figure.caption.46}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Measurement of the CPU consumption for the tested web applications. 100\% corresponds to the use of a single CPU core.\relax }}{49}{figure.caption.59}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Overview of steps required to detect and remove UI elements for debloated actions.\relax }}{55}{figure.caption.62}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Overview of steps required to detect and remove UI elements for debloated actions.\relax }}{56}{figure.caption.62}
+\addvspace {10\p@ }
