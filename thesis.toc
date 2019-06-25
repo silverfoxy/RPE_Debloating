@@ -44,7 +44,7 @@
 \contentsline {section}{\numberline {3.3}Debloating web applications}{29}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Debloating strategies}{29}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Detecting the execution of removed code}{30}{subsection.3.3.2}
-\contentsline {chapter}{\numberline {4}Results \& Conclusion}{31}{chapter.4}
+\contentsline {chapter}{\numberline {4}Results}{31}{chapter.4}
 \contentsline {section}{\numberline {4.1}Results}{31}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Tutorials vs. Monkey Testing vs. Crawling vs. Vulnerability Scanning}{32}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Debloating by the numbers}{32}{subsection.4.1.2}
@@ -67,13 +67,13 @@
 \contentsline {subsection}{\numberline {4.1.6}Testing debloated web applications against real exploits}{47}{subsection.4.1.6}
 \contentsline {section}{\numberline {4.2}Performance analysis}{48}{section.4.2}
 \contentsline {section}{\numberline {4.3}Limitations}{50}{section.4.3}
-\contentsline {section}{\numberline {4.4}Future work}{53}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}End-to-end web application debloating}{54}{subsection.4.4.1}
+\contentsline {chapter}{\numberline {5}Future work}{54}{chapter.5}
+\contentsline {subsection}{\numberline {5.0.1}End-to-end web application debloating}{54}{subsection.5.0.1}
 \contentsline {subsubsection}{Handling calls to removed code}{54}{section*.60}
 \contentsline {subsubsection}{Propagating debloating changes to the UI}{55}{section*.61}
 \contentsline {paragraph}{Implementation details:}{55}{section*.63}
-\contentsline {subsubsection}{Code coverage collection in production environment}{56}{section*.64}
-\contentsline {paragraph}{Optimized code coverage collection:}{56}{section*.65}
-\contentsline {subsubsection}{Attack surface reduction through API specialization}{57}{section*.66}
-\contentsline {section}{\numberline {4.5}Conclusion}{59}{section.4.5}
-\contentsline {chapter}{Bibliography}{62}{section*.69}
+\contentsline {subsubsection}{Code coverage collection in production environments}{57}{section*.64}
+\contentsline {paragraph}{Optimized code coverage collection:}{57}{section*.65}
+\contentsline {subsubsection}{Attack surface reduction through API specialization}{58}{section*.66}
+\contentsline {chapter}{\numberline {6}Conclusion}{60}{chapter.6}
+\contentsline {chapter}{Bibliography}{63}{section*.69}
